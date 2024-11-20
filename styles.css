@@ -1,1 +1,25 @@
 /*  your css code here. If applicable */
+#container {
+    margin: 20px;
+    position: relative; /* To ensure the pseudo-elements are positioned correctly */
+}
+
+#container::before {
+    content: "Before Text - ";  /* Content to be inserted before the container */
+    color: #f00;  /* Red color */
+    font-size: 20px;  /* Font size */
+    position: absolute; /* Position the text before */
+    left: -150px;  /* Adjust this value based on desired space */
+    top: 50%;
+    transform: translateY(-50%); /* Center the text vertically */
+}
+
+#container::after {
+    content: " - After Text";  /* Content to be inserted after the container */
+    color: #f00;  /* Red color */
+    font-size: 20px;  /* Font size */
+    position: absolute; /* Position the text after */
+    right: -150px;  /* Adjust this value based on desired space */
+    top: 50%;
+    transform: translateY(-50%); /* Center the text vertically */
+}
